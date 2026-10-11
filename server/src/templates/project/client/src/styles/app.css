@@ -1,0 +1,26 @@
+/* 全局样式：uni-app 里写在 App.vue 的 <style> 中并通过 @import 引入，H5 与小程序都支持。 */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #d8dbe0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.btn--primary {
+  border-color: #07c160;
+  background: #07c160;
+  color: #ffffff;
+}
+
+.btn--small {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+}

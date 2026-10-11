@@ -1,0 +1,7 @@
+# 源码统一 LF（仓库约定：UTF-8 无 BOM + LF），避免 checkout 时被转成 CRLF
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary
+*.db binary

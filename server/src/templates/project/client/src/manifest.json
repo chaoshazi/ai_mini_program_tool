@@ -1,0 +1,24 @@
+{
+  "name": "{{appTitle}}",
+  "appid": "",
+  "description": "{{description}}",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "minified": true
+    },
+    "usingComponents": true
+  },
+  "h5": {
+    "title": "{{appTitle}}",
+    "router": {
+      "base": "./"
+    }
+  },
+  "vueVersion": "3"
+}

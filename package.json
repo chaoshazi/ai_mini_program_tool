@@ -1,0 +1,33 @@
+{
+  "name": "miniwechat",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AI 小程序开发工具：自然语言生成/修改 uni-app(Vue3)+TS 全栈工程",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm run dev --workspace server",
+    "dev:web": "npm run dev --workspace web",
+    "build": "npm run build --workspace server && npm run build --workspace web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspace server",
+    "gen:types": "npm run gen:types --workspace server",
+    "gen:types:check": "npm run gen:types:check --workspace server",
+    "check:skills": "node scripts/check-skills.mjs",
+    "smoke": "npm run smoke --workspace server",
+    "smoke:template": "npm run smoke:template --workspace server",
+    "check:render": "npm run check:render --workspace server",
+    "check:browser": "npm run check:browser --workspace server",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

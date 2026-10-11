@@ -1,0 +1,31 @@
+{
+  "name": "@miniwechat/server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "node --disable-warning=ExperimentalWarning --import tsx --watch src/index.ts",
+    "start": "node --disable-warning=ExperimentalWarning --import tsx src/index.ts",
+    "start:dist": "node --disable-warning=ExperimentalWarning dist/index.js",
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-assets.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --disable-warning=ExperimentalWarning --import tsx --test tests/*.test.ts",
+    "gen:types": "node --disable-warning=ExperimentalWarning --import tsx scripts/gen-web-types.ts",
+    "gen:types:check": "node --disable-warning=ExperimentalWarning --import tsx scripts/gen-web-types.ts --check",
+    "smoke": "node --disable-warning=ExperimentalWarning --import tsx scripts/smoke.ts",
+    "smoke:template": "node --disable-warning=ExperimentalWarning --import tsx scripts/smoke-template.ts",
+    "check:render": "node --disable-warning=ExperimentalWarning --import tsx scripts/render-check.ts",
+    "check:browser": "node --disable-warning=ExperimentalWarning --import tsx scripts/check-browser.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@fastify/static": "^8.0.3",
+    "fastify": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "{{appName}}",
+  "private": true,
+  "version": "0.1.0",
+  "description": "{{description}}",
+  "type": "module",
+  "workspaces": ["client", "server"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "typecheck": "npm run typecheck --workspace client && npm run typecheck --workspace server",
+    "build": "npm run build:h5 --workspace client && npm run build --workspace server",
+    "start": "npm run start --workspace server"
+  }
+}

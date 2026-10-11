@@ -1,0 +1,153 @@
+/* 预览运行时的基础样式：模拟小程序外观 + uni 内置组件的最小样式。只影响浏览器预览。 */
+:root {
+  --mw-brand: #07c160;
+  --mw-text: #1f2937;
+  --mw-muted: #7a7e83;
+  --mw-border: #ebedf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f6;
+  color: var(--mw-text);
+  font: 14px/1.5 -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.mw-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 24px rgba(15, 23, 42, 0.08);
+}
+
+.mw-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: #f7f8fa;
+  border-bottom: 1px solid var(--mw-border);
+}
+
+.mw-app__body {
+  flex: 1;
+  padding: 12px;
+  padding-bottom: 72px;
+}
+
+.mw-tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  border-top: 1px solid var(--mw-border);
+}
+
+.mw-tabbar__item {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mw-tabbar__item.is-active {
+  font-weight: 600;
+}
+
+.mw-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 96px;
+  transform: translateX(-50%);
+  background: rgba(23, 26, 29, 0.85);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  z-index: 100;
+}
+
+.mw-missing {
+  padding: 24px;
+  color: #d0342c;
+}
+
+.uni-view {
+  display: block;
+}
+
+.uni-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--mw-border);
+  border-radius: 6px;
+  background: #f7f8fa;
+  color: var(--mw-text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.uni-button--primary {
+  background: var(--mw-brand);
+  border-color: var(--mw-brand);
+  color: #fff;
+}
+
+.uni-button--warn {
+  background: #fa5151;
+  border-color: #fa5151;
+  color: #fff;
+}
+
+.uni-button--mini {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.uni-button.is-plain {
+  background: #fff;
+  color: var(--mw-brand);
+}
+
+.uni-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.uni-input,
+.uni-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--mw-border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.uni-scroll-view {
+  max-height: 60vh;
+}
+
+.uni-navigator {
+  color: #576b95;
+  cursor: pointer;
+}
+
+.uni-page {
+  min-height: 100%;
+}
